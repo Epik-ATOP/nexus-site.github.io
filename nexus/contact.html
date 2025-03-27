@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet"  href="contact.css">
+    <link rel="icon" type="image/x-icon" href="assets/nexus-icon-trsp.png">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script src="script.js"></script>
+
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "2dTRjMcrbRPUFUl2I",
+      });
+   })();
+</script>
+    <script src="https://kit.fontawesome.com/05aebf7e67.js" crossorigin="anonymous"></script>
+    <title>Contact Us | CIS-Nexus</title>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <a href="https://cis-nexus.wixsite.com/cisnexusng"
+            target="_blank">
+            <img src = "assets/nexus-logo-trsp.png">
+        </a>
+        </div>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#media">Media</a></li>
+            <li><a href="#experience">Experiences</a></li>
+            <li><a href="sponsor.html">Sponsors</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="main" id="main">
+        <div class="left">
+            <h1>CONTACT US!</h1>
+            <p><i class="fa-solid fa-location-dot"></i>  8 Amore Street, Lekki Phase One, 106104, Lagos</p>
+            <p><i class="fa-solid fa-phone"></i>  <a href="tel:+234 906 2684 338">+234 906 2684 338</a></p>
+            <p><i class="fa-solid fa-envelope"></i>  <a href="mail:seniorschool@cislagos.org">seniorschool@cislagos.org </a></p>
+        </div>
+        <div class="right">
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required> <br>
+                <label for="email">Email:</label> 
+                <input type="email" id="email" name="email" required> <br>
+                <label for="message">Message:</label> <br>
+                <textarea id="message" name="message" rows="4" required></textarea> <br>
+                <p><button type="submit" onclick="sendMail()">Send</button> or send via <a href="mail:seniorschool@cislagos.org">Gmail</a></p>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="main" id="sponsor">
+        <div class="left">
+            <h1>BECOME A SPONSOR</h1>
+            <p>If you're a company, please consider becoming a sponsor</p>
+            <p>Also, please read the Sponsorship Proposal Booklet </p>
+            <a href="old booklet.pdf" download>
+                <button><i class="fa-solid fa-file-pdf"></i>  Sponsorship Proposal Booklet</button>
+            </a>
+
+        </div>
+        <div class="right">
+            <form action="submit_form.php" method="post">
+                <label for="name">Company Name:</label>
+                <input type="text" id="name" name="name" required> <br>
+                <label for="email">Email:</label> 
+                <input type="email" id="email" name="email" required> <br>
+                <label for="sponsorship-level">Sponsorship Level:</label>
+                <select id="sponsorship-level" name="sponsorship-level" required>
+                    <option value="bronze">Cyclotron (₦5,000,000 and above)</option>
+                    <option value="silver">Rocket (₦1,000,000 and above)</option>
+                    <option value="gold">Jet (₦500,000 and above)</option>
+                    <option value="platinum">Drone (₦100,000 and above)</option>
+                    <option value="diamond">Smartwatch (Below ₦100,000)</option>
+                </select> <br>
+                <label for="message">Message:</label> <br>
+                <textarea id="message" name="message" rows="4" required></textarea> <br>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="top">
+            <div class="logo">
+                <a href="https://www.cislagos.com/"><img src="assets/cis-trsp.png"></a>
+                <a href="https://www.firstinspires.org/robotics/ftc"><img src="assets/first2.png"></a>
+                <div class="copyright">
+                    <p>© 2025 Children's International School.</p>
+                    <p>All Rights Reserved</p>    
+                </div>
+                <a href="https://info.firstinspires.org/first-dive"><img src="assets/into-the-deep.png"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
